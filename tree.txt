@@ -1,0 +1,179 @@
+.
+├── components.json
+├── messages
+│   ├── ar.json
+│   └── en.json
+├── next.config.ts
+├── next-env.d.ts
+├── package.json
+├── package-lock.json
+├── postcss.config.mjs
+├── public
+│   └── vite.svg
+├── src
+│   ├── app
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   ├── [locale]
+│   │   │   ├── about
+│   │   │   │   └── page.tsx
+│   │   │   ├── admin
+│   │   │   │   ├── page.tsx
+│   │   │   │   ├── places
+│   │   │   │   │   ├── [id]
+│   │   │   │   │   │   └── edit
+│   │   │   │   │   │       └── page.tsx
+│   │   │   │   │   ├── new
+│   │   │   │   │   │   └── page.tsx
+│   │   │   │   │   └── PlaceForm.tsx
+│   │   │   │   └── settings
+│   │   │   │       ├── AdminSettingsForm.tsx
+│   │   │   │       └── page.tsx
+│   │   │   ├── all-categories
+│   │   │   │   └── page.tsx
+│   │   │   ├── category
+│   │   │   │   └── [slug]
+│   │   │   │       └── page.tsx
+│   │   │   ├── CategorySection.tsx
+│   │   │   ├── favorites
+│   │   │   │   ├── FavoritesGrid.tsx
+│   │   │   │   └── page.tsx
+│   │   │   ├── FeaturedCarousel.tsx
+│   │   │   ├── HomeHero.tsx
+│   │   │   ├── layout.tsx
+│   │   │   ├── news
+│   │   │   │   └── page.tsx
+│   │   │   ├── offers
+│   │   │   │   └── page.tsx
+│   │   │   ├── OnboardingModal.tsx
+│   │   │   ├── page.tsx
+│   │   │   ├── place
+│   │   │   │   └── [id]
+│   │   │   │       ├── page.tsx
+│   │   │   │       ├── PlaceAbout.tsx
+│   │   │   │       ├── PlaceActions.tsx
+│   │   │   │       ├── PlaceHero.tsx
+│   │   │   │       ├── PlaceInfo.tsx
+│   │   │   │       ├── PlaceLocation.tsx
+│   │   │   │       └── PlaceReviews.tsx
+│   │   │   ├── privacy-policy
+│   │   │   │   └── page.tsx
+│   │   │   ├── profile
+│   │   │   │   ├── change-password
+│   │   │   │   │   ├── ChangePasswordForm.tsx
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── edit
+│   │   │   │   │   ├── EditProfileForm.tsx
+│   │   │   │   │   └── page.tsx
+│   │   │   │   ├── LogoutButton.tsx
+│   │   │   │   └── page.tsx
+│   │   │   ├── search
+│   │   │   │   ├── page.tsx
+│   │   │   │   └── SearchPageClient.tsx
+│   │   │   ├── sign-in
+│   │   │   │   ├── page.tsx
+│   │   │   │   └── SignInForm.tsx
+│   │   │   ├── sign-up
+│   │   │   │   ├── page.tsx
+│   │   │   │   └── SignUpForm.tsx
+│   │   │   └── weather
+│   │   │       ├── page.tsx
+│   │   │       └── WeatherContent.tsx
+│   │   ├── page.tsx
+│   │   ├── robots.ts
+│   │   └── sitemap.ts
+│   ├── components
+│   │   ├── layout
+│   │   │   ├── BottomTabBar.tsx
+│   │   │   ├── DesktopNav.tsx
+│   │   │   ├── GlobalDrawer.tsx
+│   │   │   └── TopAppBar.tsx
+│   │   ├── mode-toggle.tsx
+│   │   ├── shared
+│   │   │   ├── Buttons.tsx
+│   │   │   ├── EmptyState.tsx
+│   │   │   ├── FormFields.tsx
+│   │   │   ├── PlaceCard.tsx
+│   │   │   ├── SectionHeader.tsx
+│   │   │   └── StarRating.tsx
+│   │   ├── theme-provider.tsx
+│   │   └── ui
+│   │       ├── accordion.tsx
+│   │       ├── alert-dialog.tsx
+│   │       ├── alert.tsx
+│   │       ├── aspect-ratio.tsx
+│   │       ├── avatar.tsx
+│   │       ├── badge.tsx
+│   │       ├── breadcrumb.tsx
+│   │       ├── button-group.tsx
+│   │       ├── button.tsx
+│   │       ├── calendar.tsx
+│   │       ├── card.tsx
+│   │       ├── carousel.tsx
+│   │       ├── chart.tsx
+│   │       ├── checkbox.tsx
+│   │       ├── collapsible.tsx
+│   │       ├── command.tsx
+│   │       ├── context-menu.tsx
+│   │       ├── dialog.tsx
+│   │       ├── direction.tsx
+│   │       ├── drawer.tsx
+│   │       ├── dropdown-menu.tsx
+│   │       ├── empty.tsx
+│   │       ├── field.tsx
+│   │       ├── form.tsx
+│   │       ├── hover-card.tsx
+│   │       ├── input-group.tsx
+│   │       ├── input-otp.tsx
+│   │       ├── input.tsx
+│   │       ├── item.tsx
+│   │       ├── kbd.tsx
+│   │       ├── label.tsx
+│   │       ├── menubar.tsx
+│   │       ├── native-select.tsx
+│   │       ├── navigation-menu.tsx
+│   │       ├── pagination.tsx
+│   │       ├── popover.tsx
+│   │       ├── progress.tsx
+│   │       ├── radio-group.tsx
+│   │       ├── resizable.tsx
+│   │       ├── scroll-area.tsx
+│   │       ├── select.tsx
+│   │       ├── separator.tsx
+│   │       ├── sheet.tsx
+│   │       ├── sidebar.tsx
+│   │       ├── skeleton.tsx
+│   │       ├── slider.tsx
+│   │       ├── sonner.tsx
+│   │       ├── spinner.tsx
+│   │       ├── switch.tsx
+│   │       ├── table.tsx
+│   │       ├── tabs.tsx
+│   │       ├── textarea.tsx
+│   │       ├── toggle-group.tsx
+│   │       ├── toggle.tsx
+│   │       └── tooltip.tsx
+│   ├── hooks
+│   │   └── use-mobile.ts
+│   ├── i18n
+│   │   └── request.ts
+│   ├── index.css
+│   ├── lib
+│   │   ├── supabase
+│   │   │   ├── client.ts
+│   │   │   ├── middleware.ts
+│   │   │   └── server.ts
+│   │   └── utils.ts
+│   ├── middleware.ts
+│   └── types
+│       └── index.ts
+├── supabase
+│   └── migrations
+│       ├── 20260705161450_01_profiles_table.sql
+│       └── 20260705161521_02_core_tables.sql
+├── tree.txt
+├── tsconfig.app.json
+├── tsconfig.json
+└── tsconfig.node.json
+
+40 directories, 137 files

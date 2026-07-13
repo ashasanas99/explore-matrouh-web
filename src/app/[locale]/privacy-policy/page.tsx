@@ -21,18 +21,18 @@ export default async function PrivacyPolicyPage({ params }: { params: Promise<{ 
       <DesktopNav locale={locale} />
       <TopAppBar title={t('privacyPolicy')} locale={locale} backHref={`/${locale}`} />
 
-      <main className="px-4 py-6 max-w-lg mx-auto" dir={isRtl ? 'rtl' : 'ltr'}>
-        <div className="bg-white rounded-2xl p-5 card-shadow border border-border/30">
-          <div className="flex items-center gap-3 mb-5">
-            <div className="w-10 h-10 rounded-full bg-primary-lighter flex items-center justify-center">
-              <Shield size={20} className="text-primary" />
-            </div>
-            <h1 className="font-bold font-sans text-foreground text-base">{t('privacyPolicy')}</h1>
-          </div>
+      <main className="flex-grow max-w-[container-max-width] mx-auto w-full px-margin-mobile md:px-margin-desktop py-12" dir={isRtl ? 'rtl' : 'ltr'}>
+        <div className="bg-surface-container-lowest rounded-xl shadow-[0px_10px_30px_rgba(0,0,0,0.04)] p-8 md:p-12">
+          <header className="mb-12 text-center md:text-start">
+            <h1 className="font-display text-display text-primary mb-4 flex items-center justify-center md:justify-start gap-3">
+              <Shield className="text-primary w-8 h-8 md:w-10 md:h-10" aria-hidden="true" />
+              {t('privacyPolicy')}
+            </h1>
+          </header>
 
-          <div className="space-y-4">
+          <div className="space-y-6">
             {paragraphs.map((para, i) => (
-              <p key={i} className="text-sm text-foreground/80 font-sans leading-relaxed">
+              <p key={i} className="font-body-md text-body-md text-on-surface-variant">
                 {para}
               </p>
             ))}

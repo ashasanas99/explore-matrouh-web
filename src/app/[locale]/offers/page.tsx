@@ -23,12 +23,15 @@ export default async function OffersPage({ params }: { params: Promise<{ locale:
   const t = await getTranslations({ locale })
   const supabase = await createClient()
 
-  const { data: places } = await supabase
+ const { data: places, error } = await supabase
     .from('places')
     .select('*')
     .eq('has_offers', true)
     .order('created_at', { ascending: false })
 
+  if (error) {
+    console.error('[offers] Supabase error:', error.message)
+  }
   const isRtl = locale === 'ar'
 
   return (

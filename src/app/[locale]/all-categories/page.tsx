@@ -17,7 +17,7 @@ import TopAppBar from '@/components/layout/TopAppBar'
 import DesktopNav from '@/components/layout/DesktopNav'
 import EmptyState from '@/components/shared/EmptyState'
 
-export const revalidate = 3600
+export const revalidate = 0
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -44,11 +44,14 @@ export default async function AllCategoriesPage({ params }: { params: Promise<{ 
   const t = await getTranslations({ locale })
   const supabase = await createClient()
 
-  const { data: categories } = await supabase
+const { data: categories, error } = await supabase
     .from('categories')
     .select('*')
     .order('sort_order', { ascending: true })
 
+  if (error) {
+    console.error('[all-categories] Supabase error:', error.message)
+  }
   const isRtl = locale === 'ar'
 
   return (
